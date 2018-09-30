@@ -6,6 +6,10 @@ Arduino based Networked Temperature and Humidity Sensor
 High precision temperature and humidity sensor with network (LAN) connections. With simple Web interface
 and support for logging data using syslog.
 
+This was created as an experiment to see how well Arduino can control cheap ENC28J60 LAN modules. 
+Turns out surprisingly well, altough 32KB flash size is clear limitation (no space implement any fancy UI,
+due to shee size of HTML code needed...)
+
 
 ## Components
 - Adruino Nano (or compatible)
@@ -73,5 +77,19 @@ Sep 29 22:48:28 10.30.42.3 LANsensor: 32.40,C,37.7,%,Garage,2017-09-29 22:48:28 
 Sep 29 22:53:27 10.30.42.3 LANsensor: 32.32,C,37.9,%,Garage,2017-09-29 22:53:27 PDT,733503330,37
 ```
 
+
+### Compiling
+
+This was built/tested around Arduino Nano, but this should run easily on pretty much any Arduino with minor changes needed.
+
+Following Libraries are needed/used:
+
+* [TinyTZ](https://github.com/tjko/TinyTZ)
+* [WireScan](https://github.com/tjko/WireScan)
+* [HDC1050](https://github.com/tjko/HDC1050)
+* [ethercard](https://github.com/tjko/ethercard)
+
+Note, modified *ethercard* and *HDC1050* libraries were used and using the original versions of these might
+require changes to LANsensor code...
 
 
