@@ -16,7 +16,7 @@ due to shee size of HTML code needed...)
 - HDC1080 sensor module (for example "CJMCU-1080")
 - ENC28J60 Ethernet LAN Module for Arduino
 - DS3231 IIC High Precision Real Time Clock Module [optional]
-- 3.3V Voltage reulator module (to power ENC28J60)
+- 3.3V Voltage buck regulator module (to power ENC28J60 module)
 
 ## Enclosure
 
